@@ -67,7 +67,7 @@
 * **앙상블 모델:**
     * `VotingClassifier` (Soft Voting): 개별 모델(LR, RF, XGB)의 예측 확률을 가중 평균하여 최종 예측을 수행
     * `StackingClassifier`: 개별 모델을 1단계 예측기로, `LogisticRegression`을 메타(final) 모델로 사용하는 스태킹 앙상블을 구현
-* **모델 선택:** `classification_report`, `confusion_matrix`와 **캐글 최종 점수**를 비교하여 일반화 성능이 우수한 **RandomForest** 모델 선택
+* **모델 선택:** `classification_report`, `confusion_matrix`와 **캐글 최종 점수**를 비교하여 일반화 성능이 우수한 **RandomForestClassifier** 모델 선택
 * **모델 해석:** `RandomForest`와 `XGBoost`의 `feature_importances_` (피처 중요도), `LogisticRegression`의 `coef_` (계수)를 시각화하여, `SurvivalRate`, `Title`, `Sex` 등의 피처가 예측에 중요하게 작용함을 확인
       
 ---
@@ -77,7 +77,7 @@
 * 개별 모델(RF, LR, XGB) 및 앙상블 모델(Voting, Stacking) 모두 검증 세트(Validation Set)에서 약 **85%**의 안정적인 정확도(Accuracy)를 보임
 * 피처 중요도 분석 결과, `feature_engineering.ipynb`에서 생성한 `SurvivalRate` (가족/티켓 생존율) 피처가 `Title`이나 `Sex` 만큼이나 예측에 매우 강력한 영향을 미치는 핵심 피처임을 확인
 * <img width="1233" height="672" alt="image" src="https://github.com/user-attachments/assets/3caa5db7-33fd-4694-b55c-8c16bfc54b5e" />
-* 최종적으로 튜닝된 `RandomForestClassifier` 모델을 사용하여 캐글에 제출, **14,671팀 중 681등 (상위 4.7%)**의 성과를 달성
+* 최종적으로 튜닝된 `RandomForestClassifier` 모델을 사용하여 캐글에 제출, Public Score 0.79665으로 **14,671팀 중 681등 (상위 4.7%)**의 성과를 달성
 
 ---
 
