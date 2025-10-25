@@ -6,7 +6,6 @@
 * **데이터:** 캐글 "Titanic - Machine Learning from Disaster" 대회 데이터 (링크: [Kaggle Competition Link](https://www.kaggle.com/c/titanic))
 * **주요 특징:**
     * **캐글 리더보드 순위 681 / 14671 (상위 4.7%)** 달성
-    * 고급 피처 엔지니어링 (데이터 누수를 방지한 타겟 인코딩) 적용
     * `Pipeline`과 `ColumnTransformer`를 활용한 체계적인 전처리 및 모델링 파이프라인 구축
     * `RandomForest`, `LogisticRegression`, `XGBoost` 등 개별 모델 튜닝 및 `Voting`, `Stacking` 앙상블 모델 비교
 
