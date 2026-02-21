@@ -1,3 +1,14 @@
+## Overview 
+This repository contains my solution for the Kaggle **Titanic** competition (tabular classification).
+I built an end-to-end workflow with preprocessing, feature engineering, model selection, and ensembling.
+Result: **Top 4.7% (681/14,671)** on the public leaderboard (**score: 0.79665**).
+Key techniques: `Pipeline` + `ColumnTransformer`, `StratifiedKFold` CV, `GridSearchCV`, and ensemble methods (Voting/Stacking).
+Focus: improving generalization through leakage-aware validation and iterative feature engineering.
+
+## Environment
+Python (pandas, scikit-learn, xgboost).  
+Notebooks are organized to follow the workflow from preprocessing → feature engineering → modeling.
+
 # 캐글 타이타닉 생존자 예측 (Kaggle Titanic) 🚢🌊
 
 ## 1. 프로젝트 개요 (Overview)
@@ -39,7 +50,7 @@
     * `Age`: 훈련 데이터의 중앙값(median)으로 대체
     * `Cabin`: 객실 번호의 첫 글자(Deck)만 추출하고, 결측치는 'Unknown'으로 대체
     * `Embarked`: 상관관계 분석을 통해 가장 가능성이 높은 'C'로 채움
-    * `Fare`: Pclass와 Embarked가 동일한 다른 승객들의 요금 중앙값으로 대체하여 논리적인 추론을 통해 결측치를 채움움
+    * `Fare`: Pclass와 Embarked가 동일한 다른 승객들의 요금 중앙값으로 대체하여 논리적인 추론을 통해 결측치를 채움
 
 ### 4.2 피처 엔지니어링 (`feature_engineering.ipynb`)
 
