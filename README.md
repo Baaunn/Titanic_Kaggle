@@ -2,7 +2,7 @@
 This repository contains my solution for the Kaggle **Titanic** competition (tabular classification).
 I built an end-to-end workflow with preprocessing, feature engineering, model selection, and ensembling.
 Result: **Top 4.7% (681/14,671)** on the public leaderboard (**score: 0.79665**).
-Key techniques: `Pipeline` + `ColumnTransformer`, `StratifiedKFold` CV, `GridSearchCV`, and ensemble methods (Voting/Stacking).
+Key techniques: `Pipeline` + `ColumnTransformer`, `StratifiedKFoldCV`, `GridSearchCV`, and ensemble methods (Voting/Stacking).
 Focus: improving generalization through leakage-aware validation and iterative feature engineering.
 
 ## Environment
