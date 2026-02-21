@@ -9,6 +9,8 @@ Focus: improving generalization through leakage-aware validation and iterative f
 Python (pandas, scikit-learn, xgboost).  
 Notebooks are organized to follow the workflow from preprocessing → feature engineering → modeling.
 
+---
+
 # 캐글 타이타닉 생존자 예측 (Kaggle Titanic) 🚢🌊
 
 ## 1. 프로젝트 개요 (Overview)
